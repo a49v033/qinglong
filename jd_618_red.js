@@ -53,13 +53,13 @@ let appId, fingerprint, token, enCryptMethodJD;
 async function main(ck, code = 'JdeDXQx') {
     const codes = ['JdeDXQx','JdeDXQx']
     code = $.CODE618 ? $.CODE618 : codes[random(0, codes.length)]
-    // console.log(code)
+    //console.log(code)
     let userName = decodeURIComponent(ck.match(/pt_pin=([^; ]+)(?=;?)/) && ck.match(/pt_pin=([^; ]+)(?=;?)/)[1])
     let jfInfo = await getInfoByUrl($, ck, code);
     ck = jfInfo['ck'];
     let url2 = jfInfo['url'];
     let UA = getUA();
-    let actId = url2.match(/mall\/active\/([^/]+)\/index\.html/) && url2.match(/mall\/active\/([^/]+)\/index\.html/)[1] || '2UboZe4RXkJPrpkp6SkpJJgtRmod';
+    let actId = url2.match(/mall\/active\/([^/]+)\/index\.html/) && url2.match(/mall\/active\/([^/]+)\/index\.html/)[1] || '31e6keDr2FdaUEVSvNZM2kjD7QVx';
     await getHtml(url2, ck, UA)
     await takeRequest(ck, UA, userName, actId, code);
 }
@@ -193,16 +193,15 @@ async function takeRequest(ck, UA, userName, actId, code) {
     return new Promise(async resolve => {
         $.get(myRequest, (err, resp, data) => {
             try {
-                if ($.show) {
                     if (err) {
                         console.log(`${$.toStr(err)}`)
                         console.log(`${userName} API请求失败，请检查网路重试`)
                     } else {
                         let res = $.toObj(data, data);
                         if (typeof res == 'object') {
-                            // if(res.msg){
-                            //     console.log('结果：'+res.msg)
-                            // }
+                             //if(res.msg){
+                             //    console.log('结果：'+res.msg)
+                             //}
                             if (res.msg.indexOf('上限') !== -1) {
                                 $.max = true;
                             }
@@ -226,7 +225,6 @@ async function takeRequest(ck, UA, userName, actId, code) {
                             console.log(data)
                         }
                     }
-                }
             } catch (e) {
 
                 $.logErr(e, resp)

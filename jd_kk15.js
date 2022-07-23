@@ -1,7 +1,20 @@
 /*
-点亮夜半场 回归真自我
+7.23-7.29 点亮夜半场 回归真自我
+新增开卡脚本，一次性脚本
+
+来自：小埋
+
+
+cron:40 20 23-29 7 *
+============Quantumultx===============
+[task_local]
+#7.23-7.29 点亮夜半场 回归真自我
+40 20 23-29 7 * jd_opencardL201.js, tag=7.23-7.29 点亮夜半场 回归真自我, enabled=true
+
+
+
 */
-const $ = new Env("点亮夜半场 回归真自我");
+const $ = new Env("7.23-7.29 点亮夜半场 回归真自我");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 let cookiesArr = [], cookie = '', message = '';
@@ -26,7 +39,7 @@ if ($.isNode()) {
         return;
     }
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < cookiesArr.length; i++) {
         if (cookiesArr[i]) {
             cookie = cookiesArr[i]
             originCookie = cookiesArr[i]
@@ -48,9 +61,9 @@ if ($.isNode()) {
             $.ADID = getUUID('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', 1);
             $.UUID = getUUID('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
             authorCodeList = [
-                '5bbaba71ea704c6ca6058271e9317633',
-                '7022f8e683e44cf8b1cd4bddfd317cb5',
-                'ea68c152e37348e0af497a8307ea2ce5',
+                'f51d95d083804505a2cce865ef1d8058',
+                '53bb5f5af6674bc7a755812d852b029f',
+                '53bb5f5af6674bc7a755812d852b029f',
             ]
             // $.authorCode = authorCodeList[random(0, authorCodeList.length)]
             $.authorCode = ownCode ? ownCode : authorCodeList[random(0, authorCodeList.length)]
@@ -100,6 +113,7 @@ async function marry() {
                 await task('dz/openCard/activityContent', `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}&pinImg=&nick=${encodeURIComponent($.pin)}&cjyxPin=&cjhyPin=&shareUuid=${encodeURIComponent($.authorCode)}`)
             }
             await task('dz/openCard/checkOpenCard', `activityId=${$.activityId}&actorUuid=${$.actorUuid}&shareUuid=${$.authorCode}&pin=${encodeURIComponent($.secretPin)}`)
+						//console.log("助力码 -> "+$.actorUuid)
             $.log("->关注店铺")
             if ($.shopTask) {
                 if (!$.shopTask.allStatus) {
@@ -140,7 +154,7 @@ async function marry() {
                 await $.wait(500)
                 await task('dz/openCard/checkOpenCard', `activityId=${$.activityId}&actorUuid=${$.actorUuid}&shareUuid=${$.authorCode}&pin=${encodeURIComponent($.secretPin)}`)
                 await $.wait(2000)
-                await task("dz/openCard/saveTask", `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}&actorUuid=${$.actorUuid}&type=2&taskValue=100030868908`)
+                await task("dz/openCard/saveTask", `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}&actorUuid=${$.actorUuid}&taskType=2&taskValue=100030868908`)
                 await $.wait(2000)
                 await task("dz/openCard/startDraw", `activityId=${$.activityId}&actorUuid=${$.actorUuid}&type=1&pin=${encodeURIComponent($.secretPin)}`)
 
@@ -186,7 +200,7 @@ function task(function_id, body, isCommon = 0, own = 0) {
                                     $.openCardStatus = data.data;
                                     break;
                                 case 'dz/openCard/saveTask':
-                                    console.log(data.data.addBeanNum)
+                                    console.log(`==>获得【${data.data.addBeanNum}】京豆\n`)
                                     break;
                                 case 'dz/openCard/saveTask':
                                     if (data.data) {

@@ -104,11 +104,17 @@
             "envName":"DPLHTY",
             "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_opencardDPLHTY.js"
         },
+        {
+            "isOpen": true,
+            "name": "店铺签到",
+            "envName":"DPQDTK",
+            "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_dpqd.js"
+        },
 	{
             "isOpen": true,
             "name": "通用开卡-shopLeague系列",
             "envName":"jd_shopLeagueId",
-            "scriptPath":"/ql/scripts/HarbourJ_HarbourToulu_ma    in/jd_shopLeague_opencard.py"
+            "scriptPath":"/ql/scripts/HarbourJ_HarbourToulu_main/jd_shopLeague_opencard.py"
         },
       {
             "isOpen": true,

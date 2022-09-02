@@ -110,6 +110,12 @@
             "envName":"jd_shopLeagueId",
             "scriptPath":"/ql/scripts/HarbourJ_HarbourToulu_ma    in/jd_shopLeague_opencard.py"
         },
+      {
+            "isOpen": true,
+            "name": "一键领取京豆-店铺会员礼包",
+            "envName":"jd_shopCollectGiftId",
+            "scriptPath":"/ql/scripts/HarbourJ_HarbourToulu_main/jd_shopCollectGift.py"
+        },
         {
             "isOpen": true,
             "name": "微定制",

@@ -110,13 +110,25 @@
             "envName":"DPQDTK",
             "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_dpqd.js"
         },
-	{
+        {
+            "isOpen": true,
+            "name": "CJ关注店铺有礼",
+            "envName":"jd_cjwxShopFollowActivity_activityId",
+            "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_cjwxShopFollowActivity.js"
+        },
+        {
+            "isOpen": true,
+            "name": "CJ知识超人通用活动",
+            "envName":"jd_cjwxKnowledgeActivity_activityId",
+            "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_cjwxKnowledgeActivity.js"
+        },
+	    {
             "isOpen": true,
             "name": "通用开卡-shopLeague系列",
             "envName":"jd_shopLeagueId",
             "scriptPath":"/ql/scripts/HarbourJ_HarbourToulu_main/jd_shopLeague_opencard.py"
         },
-      {
+        {
             "isOpen": true,
             "name": "一键领取京豆-店铺会员礼包",
             "envName":"jd_shopCollectGiftId",

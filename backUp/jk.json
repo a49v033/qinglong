@@ -112,6 +112,24 @@
         },
         {
             "isOpen": true,
+            "name": "完善信息有礼",
+            "envName":"jd_completeInfoActivity_activityId",
+            "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_completeInfoActivity.js"
+        },
+        {
+            "isOpen": true,
+            "name": "LZ盖楼有礼",
+            "envName":"jd_wxBuildActivity_activityId",
+            "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_wxBuildActivity.js"
+        },
+        {
+            "isOpen": true,
+            "name": "店铺生日礼包和会员等级礼包",
+            "envName":"jd_wxMcLevelAndBirthGifts_activityId",
+            "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_wxMcLevelAndBirthGifts.js"
+        },
+        {
+            "isOpen": true,
             "name": "CJ关注店铺有礼",
             "envName":"jd_cjwxShopFollowActivity_activityId",
             "scriptPath":"/ql/scripts/zsxwz_qinglong/jd_cjwxShopFollowActivity.js"

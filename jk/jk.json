@@ -96,7 +96,7 @@
             "isOpen": true,
             "name": "关注店铺有礼 · 超级无线",
             "envName":"jd_wxShopFollowActivity_activityUrl",
-            "scriptPath":"/ql/scripts/SuperManito_cishanjia_main/jd_txzj_lottery.js"
+            "scriptPath":"/ql/scripts/SuperManito_cishanjia_main/jd_wxShopFollowActivity.js"
         },
         {
             "isOpen": true,
@@ -115,6 +115,12 @@
             "name": "店铺抽奖 · 超级无线欧莱雅",
             "envName":"jd_lzkj_loreal_draw_url",
             "scriptPath":"/ql/scripts/SuperManito_cishanjia_main/jd_lzkj_loreal_draw.js.js"
+        },
+        {
+            "isOpen": true,
+            "name": "加购有礼 · 超级无线欧莱雅",
+            "envName":"jd_lzkj_loreal_cart_url",
+            "scriptPath":"/ql/scripts/SuperManito_cishanjia_main/jd_lzkj_loreal_cart.js"
         },
         {
             "isOpen": true,
